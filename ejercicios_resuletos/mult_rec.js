@@ -43,4 +43,22 @@ function mult_rec( a, b){
 
 }
 
-console.log(mult_rec(5,5)) //escogemos los numeros que deseamos multiplicar
+function mult_rec_manuel( a, b){
+
+    if(b == 0){ //condicion limite que rompe el ciclo
+        return 0;
+    }
+    else{
+
+        return  a + mult_rec(a, b-1) 
+    }
+
+
+}
+
+    //modificar valores segun se necesite
+    let a = 25;
+    let b = 5;
+
+console.log("tomas: ",mult_rec(a,b)) //escogemos los numeros que deseamos multiplicar
+console.log("manuel: ",mult_rec_manuel(a,b)) //escogemos los numeros que deseamos multiplicar
